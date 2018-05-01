@@ -1,5 +1,5 @@
 {
-  "name": "deterministic-chip-builder",
+  "name": "chip-builder",
   "version": "1.0.0",
   "main": "index.js",
   "author": "Ron Gierlach <rongierlach@gmail.com>",
