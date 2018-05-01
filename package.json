@@ -1,0 +1,37 @@
+{
+  "name": "deterministic-chip-builder",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ron Gierlach <rongierlach@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "backpack",
+    "build": "backpack build",
+    "start": "node ./build/main.js",
+    "pkg": "pkg ./build/main.js --out-path ./executables",
+    "eject": "npm run build && npm run pkg",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "csv-stringify": "^3.0.0",
+    "js-sha3": "^0.7.0",
+    "lodash.chunk": "^4.2.0",
+    "prompt": "^1.0.0",
+    "random-seed": "^0.3.0"
+  },
+  "devDependencies": {
+    "backpack-core": "^0.7.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^7.0.5",
+    "pkg": "^4.3.1",
+    "prettier-standard": "^8.0.1"
+  },
+  "lint-staged": {
+    "linters": {
+      "*.js": [
+        "prettier-standard",
+        "git add"
+      ]
+    }
+  }
+}
